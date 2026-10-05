@@ -14,7 +14,7 @@ public class ProductMapper implements RowMapper<ProductDetailsDto> {
     @Override
     public ProductDetailsDto mapRow(ResultSet rs, int rowNum) throws SQLException {
         return new ProductDetailsDto(
-                rs.getInt("product_id"),
+                rs.getLong("product_id"),
                 rs.getString("product_name"),
                 rs.getDouble("price"),
                 rs.getInt("stock_quantity"),

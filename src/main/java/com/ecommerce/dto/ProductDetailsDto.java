@@ -3,7 +3,7 @@ package com.ecommerce.dto;
 import com.ecommerce.enums.ProductStatus;
 
 public record ProductDetailsDto(
-        int id,
+        Long id,
         String name,
         Double price,
         int stockQuantity,

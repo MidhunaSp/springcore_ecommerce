@@ -26,11 +26,11 @@ public class ProductService {
         this.vendorRepository = vendorRepository;
     }
 
-    public List<Category> getCategoryByID(int id) {
+    public List<Category> getCategoryByID(Long id) {
         return categoryRepository.getCategoryByID(id);
     }
 
-    public List<Vendor> getVendorByID(int id) {
+    public List<Vendor> getVendorByID(Long id) {
         return vendorRepository.getVendorByID(id);
     }
 
@@ -42,7 +42,7 @@ public class ProductService {
     }
 
     // Task 2 -- find product by id
-    public ProductDetailsDto getProductById(int id){
+    public ProductDetailsDto getProductById(Long id){
         ProductDetailsDto product = productRepository.findById(id);
         if (product == null)
             throw new ProductNotFoundException("Product not found with id " + id);
@@ -50,7 +50,7 @@ public class ProductService {
     }
 
     // Task - 3 -- update stock quantity
-    public void updateStock(int id,int newQuantity){
+    public void updateStock(Long id,int newQuantity){
         if(newQuantity<0)
             throw new IllegalArgumentException("stock quantity must be positive");
         productRepository.updateStock(id,newQuantity);

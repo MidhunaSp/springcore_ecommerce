@@ -10,11 +10,12 @@ import java.sql.SQLException;
 
 @Component
 public class VendorMapper implements RowMapper<Vendor> {
+
     @Nullable
     @Override
     public Vendor mapRow(ResultSet rs, int rowNum) throws SQLException {
         return new Vendor(
-                rs.getInt("id"),
+                rs.getLong("id"),
                 rs.getString("name"),
                 rs.getString("email")
         );

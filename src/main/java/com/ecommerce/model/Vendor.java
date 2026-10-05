@@ -2,7 +2,7 @@ package com.ecommerce.model;
 
 public class Vendor {
 
-    private int id;
+    private Long id;
     private String name;
     private String email;
 
@@ -10,17 +10,17 @@ public class Vendor {
 
     }
 
-    public Vendor(int id, String name, String email) {
+    public Vendor(Long id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -17,7 +17,7 @@ public class CategoryRepository {
         this.categoryMapper = categoryMapper;
     }
 
-    public List<Category> getCategoryByID(int id) {
+    public List<Category> getCategoryByID(Long id) {
         String sql="select * from category where id = ?";
         return jdbcTemplate.query(sql,categoryMapper,id);
     }

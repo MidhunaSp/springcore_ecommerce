@@ -18,7 +18,7 @@ public class VendorRepository {
         this.vendorMapper = vendorMapper;
     }
 
-    public List<Vendor> getVendorByID(int id) {
+    public List<Vendor> getVendorByID(Long id) {
         String sql="select * from vendor where id = ?";
         return jdbcTemplate.query(sql,vendorMapper,id);
     }
