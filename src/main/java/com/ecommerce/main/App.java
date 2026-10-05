@@ -49,7 +49,7 @@ public class App {
 
                     // setting category for product else creating a new category
                     System.out.println("Enter Product Category ID: ");
-                    int cid = sc.nextInt();
+                    Long cid = sc.nextLong();
                     List<Category> categories = productService.getCategoryByID(cid);
                     Category category;
                     if (categories.isEmpty()) {
@@ -70,7 +70,7 @@ public class App {
 
                     // setting vendor for product else creating a new vendor
                     System.out.println("Enter Product Vendor ID: ");
-                    int vid = sc.nextInt();
+                    Long vid = sc.nextLong();
                     List<Vendor> vendors = productService.getVendorByID(vid);
                     Vendor vendor;
                     if (vendors.isEmpty()) {
@@ -93,7 +93,7 @@ public class App {
                 }
                 case 2 -> {
                     System.out.println("Enter Product ID: ");
-                    int pid = sc.nextInt();
+                    Long pid = sc.nextLong();
                     try {
                         ProductDetailsDto product = productService.getProductById(pid);
                         System.out.println("Result: ");
@@ -104,7 +104,7 @@ public class App {
                 }
                 case 3 -> {
                     System.out.println("Enter Product ID: ");
-                    int pid = sc.nextInt();
+                    Long pid = sc.nextLong();
                     System.out.println("Enter New Product Quantity: ");
                     int newQuantity = sc.nextInt();
                     try {

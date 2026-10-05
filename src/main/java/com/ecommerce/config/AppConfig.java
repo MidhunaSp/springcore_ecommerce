@@ -19,7 +19,7 @@ public class AppConfig {
         config.setDriverClassName("com.mysql.cj.jdbc.Driver");
         config.setJdbcUrl("jdbc:mysql://localhost:3306/ecommerce");
         config.setUsername("root");
-        config.setPassword("Midhuna@2005");
+        config.setPassword("Midhu@2005");
         return new HikariDataSource(config);
     }
 
