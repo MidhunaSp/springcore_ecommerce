@@ -27,7 +27,7 @@ public class ProductRepository {
         jdbcTemplate.update(sql,values);
 }
 
-    public ProductDetailsDto findById(Long id) {
+    public ProductDetailsDto findById(int id) {
         String sql = """
                 select p.id as product_id, p.name as product_name, p.price, p.stock_quantity, p.status,
                 c.name as category_name, v.name as vendor_name
@@ -40,8 +40,8 @@ public class ProductRepository {
         return list.isEmpty() ? null : list.getFirst();
     }
 
-    public void updateStock(Long id, int newQuantity) {
-        String sql = "update product set stock_quantity = stock_quantity + ? where id = ?";
+    public void updateStock(int id, int newQuantity) {
+        String sql = "update product set stock_quantity = ? where id = ?";
         jdbcTemplate.update(sql,newQuantity,id);
     }
 
